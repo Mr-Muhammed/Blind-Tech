@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="ar" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blind Tech - Your comprehensive technology resource">
+    <title>Blind Tech</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    
+    <!-- Custom CSS -->
+
+    <link href="index.css" rel="stylesheet">
+
+</head>
+<body class="color-palette-1">
+    <!-- Accessibility Toolbar -->
+    <div class="accessibility-toolbar animate__animated animate__fadeInRight">
+        <button class="accessibility-btn" id="increaseFont" title="Increase Font Size">
+            <i class="fas fa-text-height"></i>
+        </button>
+        <button class="accessibility-btn" id="decreaseFont" title="Decrease Font Size">
+            <i class="fas fa-text-width"></i>
+        </button>
+        <button class="accessibility-btn" id="toggleContrast" title="High Contrast">
+            <i class="fas fa-adjust"></i>
+        </button>
+        <button class="accessibility-btn" id="toggleDarkMode" title="Dark Mode">
+            <i class="fas fa-moon"></i>
+        </button>
+    </div>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="logo.PNG" alt="BlindTechLogo" class="d-inline-block align-top">
+                <span class="ms-2 d-none d-md-inline">Blind Tech</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html"><i class="fas fa-home me-1"></i>Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Blog.html"><i class="fas fa-blog me-1"></i> Blog</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="categoriesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-folder me-1"></i> Categories
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
+                            <li><a class="dropdown-item" href="Cyber Security/Cyber Security.html"><i class="fas fa-shield-alt me-2"></i> Cyber Security</a></li>
+                            <li><a class="dropdown-item" href="blind section"><i class="fas fa-code me-2"></i>Blind Section</a></li>
+
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="Blog.html"><i class="fas fa-ellipsis-h me-2"></i>Blog</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="About.html"><i class="fas fa-info-circle me-1"></i>About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contact.html"><i class="fas fa-envelope me-1"></i>Contact</a>
+                    </li>
+                </ul>
+                
+                <div class="d-flex align-items-center">
+                    <div class="search-box me-3">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search..." id="searchInput" aria-label="Search">
+                            <button class="btn btn-outline-light" type="button" id="searchButton">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                        <div class="search-results mt-1" id="searchResults"></div>
+                    </div>
+                    
+                    <div class="dropdown">
+                        <button class="btn btn-outline-light dropdown-toggle" type="button" id="themeDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-palette"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="themeDropdown">
+                            <li><h6 class="dropdown-header">Theme Options</h6></li>
+                            <li><button class="dropdown-item" id="darkModeToggle"><i class="fas fa-moon me-2"></i> Dark Mode</button></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><h6 class="dropdown-header">Color Palettes</h6></li>
+                            <li><button class="dropdown-item palette-btn" data-palette="1"><i class="fas fa-circle me-2" style="color: #4e73df;"></i> Default</button></li>
+                            <li><button class="dropdown-item palette-btn" data-palette="2"><i class="fas fa-circle me-2" style="color: #e74a3b;"></i> Red/Blue</button></li>
+                            <li><button class="dropdown-item palette-btn" data-palette="3"><i class="fas fa-circle me-2" style="color: #5a5c69;"></i> Monochrome</button></li>
+                        </ul>
+                    </div>
+                    
+    </nav>
+    <!-- Hero Section -->
+    <section class="hero-section text-center animate__animated animate__fadeIn">
+        <div class="container">
+            <h1 class="hero-title">Blind Tech</h1>
+            <p class="hero-subtitle">Technology Path</p>
+            <div class="mt-4">
+                <a href="blind/Blind and mobility part 1.html" class="btn btn-light btn-lg me-3"><i class="fas fa-book-reader me-2"></i>Read Articles</a>
+                <a href="Blog.html" class="btn btn-outline-light btn-lg"><i class="fas fa-newspaper me-2"></i>Latest Posts</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container my-5">
+        <!-- Featured Article -->
+        <section id="featured-article" class="mb-5 animate__animated animate__fadeInUp">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="card border-0 shadow-sm">
+                        <img src="img/COFEE.jpg" class="card-img-top" alt="Welcome to the world of evolving technology!">
+                        <div class="card-body">
+                            <h2 class="card-title">Welcome to Blind Tech</h2>
+                            <p class="card-text">Our blog is your comprehensive destination for everything related to programming and technology. Whether you're a seasoned programmer, a hobbyist looking to learn a new programming language, interested in the latest developments in cybersecurity, or searching for technological solutions to make life easier for the visually impaired, you'll find everything you need here.</p>
+                            <p class="card-text">We provide comprehensive articles and simplified explanations covering a wide range of technical topics, as well as the latest news and trends in the field. Our goal is to be your trusted guide in the fast-paced world of technology.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-4">
+                                <div>
+                                    <span class="badge bg-primary me-2">Technology</span>
+                                    <span class="badge bg-secondary">Programming</span>
+                                </div>
+                                <a href="#" class="btn btn-primary"><i class="fas fa-book-open me-1"></i>Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Latest Article -->
+        <section class="mb-5 animate__animated animate__fadeInUp">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="card border-0 shadow-sm">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="cf.jpg" class="img-fluid rounded-start h-100" alt="Laptop open placed on a table, next to a cup of coffee.">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h2 class="card-title">Blind and Mobility - Part 1</h2>
+                                    <p class="card-text">Mobility is an essential part of human life, whether sighted or blind. Each has its own challenges that they face during mobility, which require different mental skills and diverse coping mechanisms.</p>
+                                    <p class="card-text"><small class="text-muted">Last updated 3 days ago</small></p>
+                                    <a href="Blind and mobility part 1.html" class="btn btn-primary"><i class="fas fa-arrow-right me-1"></i> Continue Reading</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="my-5 animate__animated animate__fadeInUp">
+            <h2 class="text-center mb-5">Why Choose Blind Tech?</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm text-center p-4">
+                        <div class="feature-icon">
+                            <i class="fas fa-universal-access"></i>
+                        </div>
+                        <h3>Accessibility Focused</h3>
+                        <p>We prioritize making technology accessible to everyone, including those with visual impairments.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm text-center p-4">
+                        <div class="feature-icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <h3>Security Expertise</h3>
+                        <p>Learn about the latest in cybersecurity and how to protect yourself online.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm text-center p-4">
+                        <div class="feature-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Programming Guides</h3>
+                        <p>From beginner to advanced, we cover all aspects of programming in multiple languages.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="my-5 animate__animated animate__fadeInUp">
+            <div class="card bg-gradient-primary text-white border-0 shadow">
+                <div class="card-body p-5">
+                    <div class="row align-items-center">
+                        <div class="col-lg-8">
+                            <h2 class="mb-3">Stay Updated</h2>
+                            <p class="mb-lg-0">Subscribe to our newsletter to receive the latest tech news, tutorials, and special offers directly to your inbox.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <form class="d-flex">
+                                <input type="email" class="form-control me-2" placeholder="Your email" required>
+                                <button type="submit" class="btn btn-light">Subscribe</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5 class="mb-4">About Blind Tech</h5>
+                    <p>Blind Tech is dedicated to making technology accessible and understandable for everyone, with a special focus on assisting the visually impaired community.</p>
+                    <div class="mt-4">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                    <h5 class="mb-4">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-white">Home</a></li>
+                        <li class="mb-2"><a href="Blog.html" class="text-white">Blog</a></li>
+                        <li class="mb-2"><a href="Categories.html" class="text-white">Categories</a></li>
+                        <li class="mb-2"><a href="About Us.html" class="text-white">About Us</a></li>
+                        <li class="mb-2"><a href="Contact.html" class="text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                    <h5 class="mb-4">Resources</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="FAQ.html" class="text-white">FAQ</a></li>
+                        <li class="mb-2"><a href="Support.html" class="text-white">Support</a></li>
+                        <li class="mb-2"><a href="Privacy.html" class="text-white">Privacy Policy</a></li>
+                        <li class="mb-2"><a href="Terms.html" class="text-white">Terms of Use</a></li>
+                        <li class="mb-2"><a href="#" class="text-white">Sitemap</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="mb-4">Contact Us</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i>Muhammed Antar - Cairo \ Egypt</li>
+                        <li class="mb-2"><i class="fas fa-phone me-2"></i>+2 (1554959496)</li>
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i> info@blindtech.net</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4 bg-light opacity-10">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2025 Blind Tech. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">Designed with <i class="fas fa-heart text-danger"></i> for accessible technology</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="index.js</script>
+    <!-- Custom JavaScript -->
+
+</body>
+</html>
