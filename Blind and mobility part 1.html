@@ -61,6 +61,13 @@
             border-radius: 0.5rem;
             margin: 2rem 0;
         }
+        .audio-container {
+            text-align: center;
+            margin: 20px;
+        }
+        .audio-controls button {
+            margin: 5px;
+        }
     </style>
 </head>
 <body class="color-palette-1">
@@ -184,6 +191,11 @@
                 <!-- Article Image -->
                 <img src="img/cf.jpg" alt="المكفوفون والتنقل" class="img-fluid article-img animate__animated animate__fadeIn">
 
+                    <h1 class="mb-3">سماع المقال صوتيًا</h1>
+    <audio controls>
+        <source src="potcast.wav" type="audio/mpeg">
+    </audio>
+
                 <!-- Article Body -->
                 <div class="article-content animate__animated animate__fadeInUp">
                     <p class="lead">التنقل جزء أساسي من حياة الإنسان، سواء كان مبصراً أو كفيفاً. لكل منهما تحدياته الخاصة التي يواجهها أثناء التنقل، والتي تتطلب مهارات عقلية مختلفة وآليات تأقلم متنوعة.</p>
@@ -240,7 +252,6 @@
 
                     <!-- Article Navigation -->
                     <div class="nav-article d-flex justify-content-between mt-5">
-                        <a href="#" class="btn btn-outline-primary"><i class="fas fa-arrow-right me-2"></i>المقال السابق</a>
                         <a href="Blind and mobility Part 2.html" class="btn btn-primary">الجزء الثاني <i class="fas fa-arrow-left ms-2"></i></a>
                     </div>
                 </div>
@@ -352,6 +363,22 @@
                 window.scrollTo({top: 0, behavior: 'smooth'});
             });
         });
+
+    var audio = document.getElementById("myAudio");
+
+    function playAudio() {
+        audio.play();
+    }
+
+    function pauseAudio() {
+        audio.pause();
+    }
+
+    function stopAudio() {
+        audio.pause();
+        audio.currentTime = 0;
+    }
+
     </script>
 </body>
 </html>
